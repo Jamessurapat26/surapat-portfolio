@@ -1,5 +1,6 @@
 ---
 import { projects } from "../data/projects";
+import { Image } from "astro:assets";
 
 const featuredProjects = projects.filter((p) => p.featured);
 ---
@@ -14,7 +15,7 @@ const featuredProjects = projects.filter((p) => p.featured);
 					<article class="project-card">
 						<div class="project-image">
 							<div class="project-image-placeholder">
-								<img
+								<Image
 									src={project.image}
 									alt={project.title}
 									class="project-img-content"
