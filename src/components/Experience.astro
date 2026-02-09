@@ -1,0 +1,154 @@
+---
+import { experiences } from '../data/experience';
+---
+
+<section id="experience" class="experience section">
+	<div class="container">
+		<h2 class="section-title">Experience</h2>
+
+		<div class="experience-list">
+			{experiences.map((exp) => (
+				<article class="experience-card">
+					<div class="experience-header">
+						<h3 class="experience-organization">{exp.organization}</h3>
+						<div class="experience-meta">
+							<span class="experience-role">{exp.role}</span>
+							<span class="experience-period">{exp.period}</span>
+						</div>
+					</div>
+
+					<div class="experience-content">
+						<p class="experience-summary">{exp.summary}</p>
+
+						<ul class="experience-responsibilities">
+							{exp.responsibilities.map((item) => (
+								<li>{item}</li>
+							))}
+						</ul>
+					</div>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.experience {
+		background-color: var(--color-bg-primary);
+	}
+
+	.experience-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.experience-card {
+		background-color: var(--color-bg-card);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-xl);
+		padding: 2rem;
+		transition: all var(--transition-base);
+	}
+
+	.experience-card:hover {
+		border-color: var(--color-blue-600);
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-blue);
+	}
+
+	.experience-header {
+		margin-bottom: 1.5rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.experience-organization {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--color-blue-400);
+		margin-bottom: 0.75rem;
+	}
+
+	.experience-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		align-items: center;
+	}
+
+	.experience-role {
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: var(--color-text-primary);
+	}
+
+	.experience-period {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		padding: 0.25rem 0.75rem;
+		background-color: var(--color-bg-secondary);
+		border-radius: var(--radius-md);
+	}
+
+	.experience-content {
+		color: var(--color-text-secondary);
+	}
+
+	.experience-summary {
+		font-size: 1rem;
+		line-height: 1.7;
+		margin-bottom: 1.25rem;
+	}
+
+	.experience-responsibilities {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.experience-responsibilities li {
+		position: relative;
+		padding-left: 1.5rem;
+		margin-bottom: 0.75rem;
+		font-size: 0.9375rem;
+		line-height: 1.6;
+	}
+
+	.experience-responsibilities li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.5rem;
+		width: 6px;
+		height: 6px;
+		background: var(--gradient-blue);
+		border-radius: 50%;
+	}
+
+	.experience-responsibilities li:last-child {
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 640px) {
+		.experience-card {
+			padding: 1.5rem;
+		}
+
+		.experience-organization {
+			font-size: 1.25rem;
+		}
+
+		.experience-role {
+			font-size: 1rem;
+		}
+
+		.experience-meta {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+		}
+	}
+</style>

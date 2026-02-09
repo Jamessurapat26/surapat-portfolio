@@ -1,0 +1,167 @@
+---
+import { personal } from "../data/personal";
+import { socialLinks } from "../data/social";
+
+const getIcon = (iconName: string) => {
+	const icons: Record<string, string> = {
+		github: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>`,
+		linkedin: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`,
+		twitter: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>`,
+		dev: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v20h20V12"/><path d="M12 12 2 2"/><path d="M12 22V12"/><path d="M22 12V2h-8"/><path d="M22 22V12h-8"/></svg>`,
+	};
+	return icons[iconName] || icons.github;
+};
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+	<div class="container">
+		<!-- <div class="footer-content">
+			<div class="footer-brand">
+				<a href="#home" class="footer-logo">
+					<span class="logo-text">{personal.name.split(' ')[0]}</span>
+					<span class="logo-dot">.</span>
+				</a>
+			</div>
+			
+			<div class="footer-social">
+				<span class="social-label">Connect with me:</span>
+				<div class="social-links">
+					{socialLinks.map((link) => (
+						<a 
+							href={link.url} 
+							target="_blank" 
+							rel="noopener noreferrer"
+							class="social-link"
+							aria-label={link.name}
+						>
+							<Fragment set:html={getIcon(link.icon)} />
+						</a>
+					))}
+				</div>
+			</div>
+		</div> -->
+
+		<div class="footer-bottom">
+			<p class="copyright">
+				© {currentYear}
+				{personal.name}. All rights reserved.
+			</p>
+			<p class="credits">
+				Built with <span class="heart">❤</span> using Astro
+			</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background-color: var(--color-bg-secondary);
+		border-top: 1px solid var(--color-border);
+		padding: 0 0 1.5rem;
+	}
+
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	@media (min-width: 640px) {
+		.footer-content {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	.footer-logo {
+		font-size: 1.5rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.logo-text {
+		background: var(--gradient-blue-text);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.logo-dot {
+		color: var(--color-blue-500);
+	}
+
+	.footer-tagline {
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		margin-top: 0.5rem;
+	}
+
+	.footer-social {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	@media (min-width: 640px) {
+		.footer-social {
+			flex-direction: row;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+
+	.social-label {
+		font-size: 0.875rem;
+		color: var(--color-text-secondary);
+	}
+
+	.social-links {
+		display: flex;
+		gap: 0.75rem;
+	}
+
+	.social-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: var(--radius-md);
+		background-color: var(--color-bg-card);
+		border: 1px solid var(--color-border);
+		color: var(--color-text-secondary);
+		transition: all var(--transition-base);
+	}
+
+	.social-link:hover {
+		background-color: var(--color-blue-600);
+		border-color: var(--color-blue-500);
+		color: white;
+		transform: translateY(-2px);
+	}
+
+	.footer-bottom {
+		padding-top: 1.5rem;
+		text-align: center;
+	}
+
+	.copyright {
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		margin-bottom: 0.5rem;
+	}
+
+	.credits {
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
+	}
+
+	.heart {
+		color: #ef4444;
+	}
+</style>

@@ -1,12 +1,44 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = 'Surapat Saetan | Full-Stack Developer & Backend Developer',
+	description = 'Computer Engineering student and full-stack developer specializing in scalable backend systems and modern web applications. Proficient in Python, JavaScript, RESTful APIs, and database management.'
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<meta name="author" content="Surapat Saetan" />
+		<meta name="theme-color" content="#0a0a0a" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/images/og-image.jpg" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="/images/og-image.jpg" />
+		
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+		
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
@@ -14,10 +46,7 @@
 </html>
 
 <style>
-	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		min-height: 100vh;
 	}
 </style>
