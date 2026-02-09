@@ -1,46 +1,81 @@
-# Astro Starter Kit: Basics
+# Professional Web Portfolio - Surapat Saetan
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to my personal portfolio repository! This project showcases my journey as a Computer Engineering student and my expertise in full-stack development, backend systems, and AI integration.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Built with **Astro**, this portfolio is designed for speed, visual excellence, and ease of content management.
 
-## 🚀 Project Structure
+## 🚀 Key Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Modern Tech Stack**: Powered by Astro for optimal performance and SEO.
+- **Dynamic Content**: Data-driven architecture using TypeScript for projects, experience, and skills.
+- **Responsive Design**: Seamless experience across mobile, tablet, and desktop devices.
+- **AI-Powered Projects**: Highlights real-world applications of AI classification and biometric data analysis.
+- **Interactive UI**: Clean and minimalist interface focusing on readability and professional aesthetics.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Tech Stack
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Languages & Frameworks
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" width="40" height="40" alt="Go" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="40" height="40" alt="JavaScript" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" width="40" height="40" alt="TypeScript" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="React" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40" height="40" alt="Next.js" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" width="40" height="40" alt="Node.js" />
+</p>
 
-## 🧞 Commands
+### Backend & Infrastructure
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" height="40" alt="Express" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" width="40" height="40" alt="NestJS" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-plain.svg" width="40" height="40" alt="FastAPI" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg" width="40" height="40" alt="PostgreSQL" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" width="40" height="40" alt="MongoDB" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg" width="40" height="40" alt="Docker" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg" width="40" height="40" alt="Git" />
+</p>
 
-All commands are run from the root of the project, from a terminal:
+## 📂 Project Highlights
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **AI Animal Recognition**: Mobile-friendly app that uses image classification to identify animals and provide narrated educational content.
+- **Go E-Wallet API**: High-performance financial backend built with Go and PostgreSQL.
+- **Library Management System**: Full-stack solution with role-based auth and multi-language support.
+- **Stress Classification API**: AI-powered REST API using LSTM models for physiological data analysis.
 
-## 👀 Want to learn more?
+## 🛠️ Getting Started
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To run this project locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Jamessurapat26/surapat-portfolio.git
+   cd surapat-portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## 👨‍💻 About the Author
+
+**Surapat Saetan**
+- 🎓 Computer Engineering student at Walailak University (Exp. 2026).
+- 📍 Nakhon Si Thammarath, Thailand.
+- ✉️ [surapat.saetann@gmail.com](mailto:surapat.saetann@gmail.com)
+
+Passionate about designing scalable backend systems and high-performance server-side applications. Always exploring new AI technologies and modern web frameworks.
+
+---
+⭐ Feel free to star this repository if you find it helpful!
